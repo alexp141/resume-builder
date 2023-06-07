@@ -24,12 +24,22 @@ function Content() {
         gDate: '',
     }]);
 
+    const [experienceInfo, setExperienceInfo] = useState([{
+        id: uid(),
+        position: '',
+        company: '',
+        city: '',
+        startDate: '',
+        endDate: '',
+    }]);
+
     
     return (
         <div className="content">
             <Form personalInfo={personalInfo} setPersonalInfo={setPersonalInfo}
-                    educationInfo={educationInfo} setEducationInfo={setEducationInfo}/>
-            <Cv personalInfo={personalInfo} educationInfo={educationInfo} />
+                    educationInfo={educationInfo} setEducationInfo={setEducationInfo}
+                    experienceInfo={experienceInfo} setExperienceInfo={setExperienceInfo}/>
+            <Cv personalInfo={personalInfo} educationInfo={educationInfo} experienceInfo={experienceInfo}/>
         </div>
     )
 }

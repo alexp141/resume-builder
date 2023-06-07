@@ -1,13 +1,13 @@
 import CVHeader from "./CVHeader"
 
 
-function Cv({personalInfo, educationInfo}) {
+function Cv({personalInfo, educationInfo, experienceInfo}) {
 
     return(
         <div className="cv">
             <CVHeader />
-            {console.log(personalInfo)}
-            {console.log(educationInfo)}
+
+            {console.log(experienceInfo)}
         </div>
     )
 }
