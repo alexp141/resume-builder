@@ -1,9 +1,11 @@
 import { useState } from "react"
 import Cv from "./cv/cv"
 import Form from "./form/Form"
+import { v4 as uid } from 'uuid';
 
 function Content() {
-    const [personalInfo, setPersonalInfo] = useState({
+    const [personalInfo, setPersonalInfo] = useState([{
+        id: uid(),
         fname: '',
         lname: '',
         title: '',
@@ -11,7 +13,16 @@ function Content() {
         phone: '',
         email: '',
         description: ''
+    }]);
+
+    const [educationInfo, setEducationInfo] = useState({
+        uniName: '',
+        city: '',
+        degree: '',
+        subject: '',
+        gDate: '',
     });
+
     
     return (
         <div className="content">
