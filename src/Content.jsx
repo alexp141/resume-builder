@@ -4,7 +4,7 @@ import Form from "./form/Form"
 import { v4 as uid } from 'uuid';
 
 function Content() {
-    const [personalInfo, setPersonalInfo] = useState([{
+    const [personalInfo, setPersonalInfo] = useState({
         id: uid(),
         fname: '',
         lname: '',
@@ -13,21 +13,23 @@ function Content() {
         phone: '',
         email: '',
         description: ''
-    }]);
+    });
 
-    const [educationInfo, setEducationInfo] = useState({
+    const [educationInfo, setEducationInfo] = useState([{
+        id: uid(),
         uniName: '',
         city: '',
         degree: '',
         subject: '',
         gDate: '',
-    });
+    }]);
 
     
     return (
         <div className="content">
-            <Form personalInfo={personalInfo} setPersonalInfo={setPersonalInfo}/>
-            <Cv personalInfo={personalInfo} />
+            <Form personalInfo={personalInfo} setPersonalInfo={setPersonalInfo}
+                    educationInfo={educationInfo} setEducationInfo={setEducationInfo}/>
+            <Cv personalInfo={personalInfo} educationInfo={educationInfo} />
         </div>
     )
 }
