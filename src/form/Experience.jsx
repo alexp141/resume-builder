@@ -13,7 +13,7 @@ function Experience({experienceInfo, setExperienceInfo}) {
          
     }
 
-    function onClick(e) {
+    function onClickAdd(e) {
         setExperienceInfo(prev => 
             prev.concat({
                 id: uid(),
@@ -23,6 +23,11 @@ function Experience({experienceInfo, setExperienceInfo}) {
                 startDate: '',
                 endDate: '',
             }));
+    }
+
+    function onClickDelete(e) {
+        setExperienceInfo(prev => 
+            prev.slice(0,-1)); //takes out last element
     }
 
     return(
@@ -39,7 +44,8 @@ function Experience({experienceInfo, setExperienceInfo}) {
                     </div>
                 );
             })}
-            <button type="button" onClick={onClick}>Add</button>
+            <button type="button" onClick={onClickAdd}>Add</button>
+            <button type="button" onClick={onClickDelete}>Delete</button>
         </section>
     )
 }

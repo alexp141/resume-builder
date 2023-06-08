@@ -13,7 +13,7 @@ function Education({educationInfo, setEducationInfo}) {
          
     }
 
-    function onClick(e) {
+    function onClickAdd(e) {
         setEducationInfo(prev => 
             prev.concat({
                 id: uid(),
@@ -25,6 +25,10 @@ function Education({educationInfo, setEducationInfo}) {
             }));
     }
 
+    function onClickDelete(e) {
+        setEducationInfo(prev => 
+            prev.slice(0,-1)); //takes out last element
+    }
 
     return(
 
@@ -41,7 +45,8 @@ function Education({educationInfo, setEducationInfo}) {
                     </div>
                 );
             })}
-            <button type="button" onClick={onClick}>Add</button>
+            <button type="button" onClick={onClickAdd}>Add</button>
+            <button type="button" onClick={onClickDelete}>Delete</button>
         </section>   
     )
 }

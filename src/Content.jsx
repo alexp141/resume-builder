@@ -3,7 +3,7 @@ import Cv from "./cv/cv"
 import Form from "./form/Form"
 import { v4 as uid } from 'uuid';
 
-function Content() {
+function Content({children}) {
     const [personalInfo, setPersonalInfo] = useState({
         id: uid(),
         fname: '',
@@ -36,9 +36,13 @@ function Content() {
     
     return (
         <div className="content">
-            <Form personalInfo={personalInfo} setPersonalInfo={setPersonalInfo}
-                    educationInfo={educationInfo} setEducationInfo={setEducationInfo}
-                    experienceInfo={experienceInfo} setExperienceInfo={setExperienceInfo}/>
+            <div className="form-container">
+                <Form personalInfo={personalInfo} setPersonalInfo={setPersonalInfo}
+                        educationInfo={educationInfo} setEducationInfo={setEducationInfo}
+                        experienceInfo={experienceInfo} setExperienceInfo={setExperienceInfo}>
+                    {children}
+                </Form>
+            </div>
             <Cv personalInfo={personalInfo} educationInfo={educationInfo} experienceInfo={experienceInfo}/>
         </div>
     )

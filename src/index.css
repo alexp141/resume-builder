@@ -1,15 +1,24 @@
-* {
-  margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+  --header: #35bcbf;
+  --background-color: #41506b;
 }
 
-body, html {
+* {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+#root {
   min-height: 100vh;
 }
 
 .main {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 20fr 1fr;
+  grid-template-rows: 100px 1fr 100px;
 }
 
 .footer {
@@ -26,6 +35,20 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--header);
+  padding: 1em;
+}
+
+.form-container {
+  padding: 5em;
+}
+
+.form {
+  padding: 42px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  box-shadow: 5px 5px 5px black;
+  background-color: #fbfbfd;
 }
 
 .content {
@@ -33,4 +56,35 @@ body, html {
   grid-row: 2 3;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 24px;
+  background-color: var(--background-color);
+}
+
+.p-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.entry {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 12px 0px;
+}
+
+.entry input {
+  flex: auto;
+  font-family: -apple-system, sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  color: #040404;
+
+  border-radius: 0.4vw;
+  border: 1px solid transparent;
+  outline: none;
+
+}
+
+input:hover {
+  border: 1px solid green;
 }
