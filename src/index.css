@@ -105,27 +105,33 @@ input:hover {
   text-align: end;
 }
 
-.cv-experience {
+.cv-experience, 
+.cv-education {
   display: flex;
   flex-direction: column;
   max-width: 100%;
+  border-bottom: 2px solid blue;
 }
 
-.exp-entry {
+.exp-entry, 
+.edu-entry {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.exp-top {
+.exp-top,
+.edu-top {
   display: flex;
   margin-bottom: 8px;
 }
 
-.exp-top h3 {
+.exp-top h3,
+.edu-top h3 {
   margin-right: auto;
 }
 
-.exp-top p {
+.exp-top p
+.edu-top p {
   margin-left: auto;
 }
