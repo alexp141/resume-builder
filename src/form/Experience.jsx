@@ -22,6 +22,7 @@ function Experience({experienceInfo, setExperienceInfo}) {
                 city: '',
                 startDate: '',
                 endDate: '',
+                description: '',
             }));
     }
 
@@ -39,8 +40,9 @@ function Experience({experienceInfo, setExperienceInfo}) {
                         <input type="text" name="position" id={entry.id} onChange={onInfoChange} placeholder="Position"/>
                         <input type="text" name="company" id={entry.id} onChange={onInfoChange} placeholder="Company"/>
                         <input type="text" name="city" id={entry.id} onChange={onInfoChange} placeholder="City"/>
-                        <input type="text" name="from" id={entry.id} onChange={onInfoChange} placeholder="From"/>
-                        <input type="tel" name="to" id={entry.id} onChange={onInfoChange} placeholder="To"/>
+                        <input type="text" name="from" id={entry.id} onChange={onInfoChange} placeholder="Start Date"/>
+                        <input type="text" name="to" id={entry.id} onChange={onInfoChange} placeholder="End Date"/>
+                        <input type="text" name="description" id={entry.id} onChange={onInfoChange} placeholder="Description"/>
                     </div>
                 );
             })}

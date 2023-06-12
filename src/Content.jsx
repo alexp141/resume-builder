@@ -31,6 +31,7 @@ function Content({children}) {
         city: '',
         startDate: '',
         endDate: '',
+        description: '',
     }]);
 
     
@@ -43,7 +44,11 @@ function Content({children}) {
                     {children}
                 </Form>
             </div>
-            <Cv personalInfo={personalInfo} educationInfo={educationInfo} experienceInfo={experienceInfo}/>
+            <div className="cv-container">
+                <Cv personalInfo={personalInfo} educationInfo={educationInfo} experienceInfo={experienceInfo}>
+                    {children}
+                </Cv>
+            </div>
         </div>
     )
 }

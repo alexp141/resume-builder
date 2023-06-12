@@ -39,16 +39,18 @@
   padding: 1em;
 }
 
-.form-container {
-  padding: 5em;
+.form-container, .cv-container{
+  padding: 1em;
 }
 
-.form {
+.form, .cv {
   padding: 42px;
   border: 2px solid transparent;
   border-radius: 6px;
   box-shadow: 5px 5px 5px black;
   background-color: #fbfbfd;
+  width: 45vw;
+  overflow-wrap: break-word;
 }
 
 .content {
@@ -86,5 +88,44 @@
 }
 
 input:hover {
-  border: 1px solid green;
+  border: 1px solid var(--background-color);
+}
+
+.cv-header {
+  display: flex;
+  border-bottom: 2px solid blue;
+}
+
+.name-info {
+  flex: auto;
+}
+
+.header-p-info {
+  flex: auto;
+  text-align: end;
+}
+
+.cv-experience {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.exp-entry {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.exp-top {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.exp-top h3 {
+  margin-right: auto;
+}
+
+.exp-top p {
+  margin-left: auto;
 }
