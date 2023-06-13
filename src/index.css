@@ -3,12 +3,16 @@
 :root {
   --header: #35bcbf;
   --background-color: #41506b;
+  --dark-teal: #79c2d0;
+  --light-teal: #bbe4e9;
+  --dark-gray: rgb(51, 51, 51);
 }
 
 * {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
+  color: var(--dark-gray);
 }
 
 #root {
@@ -49,7 +53,7 @@
   border-radius: 6px;
   box-shadow: 5px 5px 5px black;
   background-color: #fbfbfd;
-  width: 45vw;
+  width: 40vw;
   overflow-wrap: break-word;
 }
 
@@ -93,7 +97,9 @@ input:hover {
 
 .cv-header {
   display: flex;
-  border-bottom: 2px solid blue;
+  border-bottom: 2px solid var(--light-teal);
+  height: 100px;
+  color: #41506b;
 }
 
 .name-info {
@@ -110,7 +116,8 @@ input:hover {
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  border-bottom: 2px solid blue;
+  border-bottom: 2px solid var(--light-teal);
+  margin: 12px 0px;
 }
 
 .exp-entry, 
@@ -118,6 +125,7 @@ input:hover {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin: 12px 0px;
 }
 
 .exp-top,
@@ -134,4 +142,13 @@ input:hover {
 .exp-top p
 .edu-top p {
   margin-left: auto;
+}
+
+.description {
+  padding: 12px 0px;
+  border-bottom: 2px solid var(--light-teal);
+}
+
+h2 {
+  margin-bottom: 12px;
 }

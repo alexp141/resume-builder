@@ -9,7 +9,7 @@ function CVEducation({educationInfo}) {
                     <div className="edu-entry" key={entry.id}>
                         <div className="edu-top">
                             <h3>{entry.degree}, {entry.subject}</h3>
-                            <p>{entry.city} | {entry.gDate}</p>
+                            <p>{entry.uniName}, {entry.city} | {entry.gDate}</p>
                         </div>
                     </div>
                 )
