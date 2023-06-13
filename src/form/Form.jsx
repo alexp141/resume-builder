@@ -35,8 +35,10 @@ function Form({personalInfo, setPersonalInfo, educationInfo, setEducationInfo, e
                 <PersonalInfo personalInfo={personalInfo} setPersonalInfo={setPersonalInfo}/>
                 <Education  educationInfo={educationInfo} setEducationInfo={setEducationInfo}/>
                 <Experience experienceInfo={experienceInfo} setExperienceInfo={setExperienceInfo}/>
-                <button type="reset" onClick={onReset}>Reset</button>
-                <button type="button" onClick={onLoadExample}>Load Example</button>
+                <div className="bottom-btns">
+                    <button type="reset" onClick={onReset}>Reset</button>
+                    <button type="button" onClick={onLoadExample}>Load Example</button>
+                </div>
             </form>
             
         </div>

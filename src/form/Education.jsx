@@ -32,7 +32,7 @@ function Education({educationInfo, setEducationInfo}) {
 
     return(
 
-        <section className="education">
+        <section className="education form-sec">
             <h3>Education</h3>
             {educationInfo.map(entry => {
                 return (

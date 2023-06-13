@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 :root {
-  --header: #35bcbf;
+  --header: #959a9c;
   --background-color: #41506b;
   --dark-teal: #79c2d0;
   --light-teal: #bbe4e9;
   --dark-gray: rgb(51, 51, 51);
+  --soft-white: #fbfbfd;
 }
 
 * {
@@ -31,6 +32,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--header);
 }
 
 .header {
@@ -41,6 +43,10 @@
   align-items: center;
   background-color: var(--header);
   padding: 1em;
+}
+
+h1 {
+  color: var(--soft-white);
 }
 
 .form-container, .cv-container{
@@ -78,7 +84,8 @@
   margin: 12px 0px;
 }
 
-.entry input {
+.entry input,
+.entry textarea {
   flex: auto;
   font-family: -apple-system, sans-serif;
   font-weight: 500;
@@ -91,7 +98,9 @@
 
 }
 
-input:hover {
+input:hover,
+textarea:focus,
+textarea:hover {
   border: 1px solid var(--background-color);
 }
 
@@ -151,4 +160,30 @@ input:hover {
 
 h2 {
   margin-bottom: 12px;
+}
+
+button {
+  background-color: var(--dark-gray);
+  color: #fbfbfd;
+  width: 100px;
+  height: 30px;
+  border: 1px solid #fbfbfd;
+  border-radius: 4px;
+}
+
+.bottom-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24px 0px;
+  border-top: 2px solid var(--dark-gray);
+  padding: 12px;
+}
+
+.form-sec {
+  margin-bottom: 12px;
+}
+
+textarea {
+  resize: vertical;
 }

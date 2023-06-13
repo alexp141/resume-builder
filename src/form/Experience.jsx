@@ -32,7 +32,7 @@ function Experience({experienceInfo, setExperienceInfo}) {
     }
 
     return(
-        <section className="experience">
+        <section className="experience form-sec">
             <h3>Experience</h3>
             {experienceInfo.map(entry => {
                 return (
@@ -42,7 +42,7 @@ function Experience({experienceInfo, setExperienceInfo}) {
                         <input type="text" name="city" id={entry.id} onChange={onInfoChange} placeholder="City"/>
                         <input type="text" name="from" id={entry.id} onChange={onInfoChange} placeholder="Start Date"/>
                         <input type="text" name="to" id={entry.id} onChange={onInfoChange} placeholder="End Date"/>
-                        <input type="text" name="description" id={entry.id} onChange={onInfoChange} placeholder="Description"/>
+                        <textarea name="description" id={entry.id} onChange={onInfoChange} placeholder="Description"/>
                     </div>
                 );
             })}
