@@ -45,22 +45,16 @@
   padding: 1em;
 }
 
-h1 {
-  color: var(--soft-white);
-}
-
 .form-container, .cv-container{
   padding: 1em;
 }
 
 .form, .cv {
-  padding: 42px;
+  padding: 3rem;
   border: 2px solid transparent;
   border-radius: 6px;
   box-shadow: 5px 5px 5px black;
   background-color: #fbfbfd;
-  width: 40vw;
-  overflow-wrap: break-word;
 }
 
 .content {
@@ -68,7 +62,7 @@ h1 {
   grid-row: 2 3;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 24px;
+  padding: 1.5rem;
   background-color: var(--background-color);
 }
 
@@ -80,8 +74,8 @@ h1 {
 .entry {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin: 12px 0px;
+  gap: 1rem;
+  margin: 1rem 0px;
 }
 
 .entry input,
@@ -134,23 +128,23 @@ textarea:hover {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 12px 0px;
+  margin: 1rem 0px;
 }
 
 .exp-top,
 .edu-top {
   display: flex;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 .exp-top h3,
 .edu-top h3 {
-  margin-right: auto;
+  flex: 2;
 }
 
-.exp-top p
+.exp-top p,
 .edu-top p {
-  margin-left: auto;
+  flex: 1;
 }
 
 .description {
@@ -165,23 +159,27 @@ h2 {
 button {
   background-color: var(--dark-gray);
   color: #fbfbfd;
-  width: 100px;
-  height: 30px;
+  width: 7rem;
+  height: 2rem;
   border: 1px solid #fbfbfd;
   border-radius: 4px;
+}
+
+button:active {
+  background-color: rgb(63, 238, 203);
 }
 
 .bottom-btns {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 24px 0px;
+  margin: 2rem 0px;
   border-top: 2px solid var(--dark-gray);
-  padding: 12px;
+  padding: 1rem;
 }
 
 .form-sec {
-  margin-bottom: 12px;
+  margin-bottom: 1rem;
 }
 
 textarea {

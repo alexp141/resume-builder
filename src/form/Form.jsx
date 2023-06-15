@@ -33,8 +33,8 @@ function Form({personalInfo, setPersonalInfo, educationInfo, setEducationInfo, e
         <div className="form">
             <form action="www.google.com">
                 <PersonalInfo personalInfo={personalInfo} setPersonalInfo={setPersonalInfo}/>
-                <Education  educationInfo={educationInfo} setEducationInfo={setEducationInfo}/>
                 <Experience experienceInfo={experienceInfo} setExperienceInfo={setExperienceInfo}/>
+                <Education  educationInfo={educationInfo} setEducationInfo={setEducationInfo}/>
                 <div className="bottom-btns">
                     <button type="reset" onClick={onReset}>Reset</button>
                     <button type="button" onClick={onLoadExample}>Load Example</button>
