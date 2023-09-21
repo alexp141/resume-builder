@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Cv from "./cv/cv"
+import Cv from "./cv/Cv.jsx"
 import Form from "./form/Form"
 import { v4 as uid } from 'uuid';
 
