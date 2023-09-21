@@ -5,4 +5,4 @@ This website allows users to input information about themselves that they would 
 With each keystroke, the React components have their state mutated and the changes are reflected immediately on the resume preview page.
 
 # Resume-builder
-Live preview: https://alexp141.github.io/cv-builder/
+Live preview: https://alexp141.github.io/resume-builder/
