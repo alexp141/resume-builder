@@ -32,7 +32,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--dark-gray);
 }
 
 .header {
@@ -41,8 +40,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--dark-gray);
   padding: 1em;
+}
+
+.header,
+.footer {
+  background-color: rgb(16, 15, 15)
 }
 
 .header h1,
@@ -68,7 +71,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 1.5rem;
-  background-color: var(--background-color);
+  background-color: var(--dark-gray);
 }
 
 .p-info {
